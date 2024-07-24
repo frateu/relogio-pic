@@ -15,9 +15,9 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"31 D:\Projects\relogio-pic\main.c
+"11 D:\Projects\relogio-pic\main.c
 [v _relogio_click relogio_click `(v  1 e 1 0 ]
-"94
+"74
 [v _main main `(v  1 e 1 0 ]
 "278 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
@@ -27,39 +27,25 @@
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1499
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-"2708
-[v _RC0 RC0 `VEb  1 e 0 @56 ]
-"2711
-[v _RC1 RC1 `VEb  1 e 0 @57 ]
-"2714
-[v _RC2 RC2 `VEb  1 e 0 @58 ]
-"2717
-[v _RC3 RC3 `VEb  1 e 0 @59 ]
-"2720
-[v _RC4 RC4 `VEb  1 e 0 @60 ]
-"2723
-[v _RC5 RC5 `VEb  1 e 0 @61 ]
-"2774
-[v _RD7 RD7 `VEb  1 e 0 @71 ]
 "11 D:\Projects\relogio-pic\relogio.c
 [v _hora hora `ui  1 e 2 0 ]
 "12
 [v _mint mint `ui  1 e 2 0 ]
 "13
 [v _segd segd `ui  1 e 2 0 ]
-"94 D:\Projects\relogio-pic\main.c
+"74 D:\Projects\relogio-pic\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"96
+"76
 [v main@flag flag `i  1 a 2 11 ]
-"127
+"107
 } 0
-"31
+"11
 [v _relogio_click relogio_click `(v  1 e 1 0 ]
 {
-"39
+"19
 [v relogio_click@segmento segmento `[10]ui  1 a 20 0 ]
-"37
+"17
 [v relogio_click@horaD horaD `ui  1 a 2 36 ]
 [v relogio_click@horaUA horaUA `ui  1 a 2 34 ]
 [v relogio_click@horaU horaU `ui  1 a 2 32 ]
@@ -70,7 +56,7 @@
 [v relogio_click@segdUA segdUA `ui  1 a 2 22 ]
 [v relogio_click@segdU segdU `ui  1 a 2 20 ]
 [v relogio_click@F1019 F1019 `[10]ui  1 s 20 F1019 ]
-"92
+"72
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]

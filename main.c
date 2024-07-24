@@ -5,28 +5,8 @@
  * Created on 23 de Julho de 2024, 09:15
  */
 
-// CONFIG
-#pragma config FOSC = HS        // Oscillator Selection bits (HS oscillator)
-#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
-#pragma config PWRTE = ON       // Power-up Timer Enable bit (PWRT enabled)
-#pragma config BOREN = ON       // Brown-out Reset Enable bit (BOR enabled)
-#pragma config LVP = OFF        // Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit (RB3 is digital I/O, HV on MCLR must be used for programming)
-#pragma config CPD = OFF        // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off)
-#pragma config WRT = OFF        // Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by EECON control)
-#pragma config CP = OFF         // Flash Program Memory Code Protection bit (Code protection off)
-
-
 #include <xc.h>
 #include "relogio.h"
-
-#define shd RC0
-#define shu RC1
-#define smd RC2
-#define smu RC3
-#define ssd RC4
-#define ssu RC5
-
-#define dp RD7
 
 void relogio_click()
 {
@@ -72,23 +52,23 @@ void relogio_click()
     
     horaD = horaUA % 10;
     
-    PORTD=segmento[horaD]; shd=1; //Turn ON display 1 and print 4th digit
-    __delay_ms(5); shd=0;     //Turn OFF display 1 after 5ms delay
+    // Liga e desliga o display de decimal das Horas
+    PORTD=segmento[horaD]; SET_PIN_HIGH(PORTC, shd); __delay_ms(5); SET_PIN_LOW(PORTC, shd);
     
-    PORTD=segmento[horaU]; shu=1; dp=1; //Turn ON display 2 and print 3rd digit
-    __delay_ms(5); shu=0; dp=0;     //Turn OFF display 2 after 5ms delay
+    // Liga e desliga o display de unidade das Horas
+    PORTD=segmento[horaU]; SET_PIN_HIGH(PORTC, shu); SET_PIN_HIGH(PORTD, dp); __delay_ms(5); SET_PIN_LOW(PORTC, shu); SET_PIN_LOW(PORTD, dp);
     
-    PORTD=segmento[mintD]; smd=1; //Turn ON display 3 and print 2nd digit
-    __delay_ms(5); smd=0;     //Turn OFF display 3 after 5ms delay
+    // Liga e desliga o display de decimal dos Minutos
+    PORTD=segmento[mintD]; SET_PIN_HIGH(PORTC, smd); __delay_ms(5); SET_PIN_LOW(PORTC, smd);
     
-    PORTD=segmento[mintU]; smu=1; dp=1; //Turn ON display 4 and print 1st digit
-    __delay_ms(5); smu=0; dp=0;     //Turn OFF display 4 after 5ms delay
+    // Liga e desliga o display de unidade dos Minutos
+    PORTD=segmento[mintU]; SET_PIN_HIGH(PORTC, smu); SET_PIN_HIGH(PORTD, dp); __delay_ms(5); SET_PIN_LOW(PORTC, smu); SET_PIN_LOW(PORTD, dp);
     
-    PORTD=segmento[segdD]; ssd=1; //Turn ON display 4 and print 1st digit
-    __delay_ms(5); ssd=0;     //Turn OFF display 4 after 5ms delay
+    // Liga e desliga o display de decimal dos Segundos
+    PORTD=segmento[segdD]; SET_PIN_HIGH(PORTC, ssd); __delay_ms(5); SET_PIN_LOW(PORTC, ssd);
     
-    PORTD=segmento[segdU]; ssu=1; //Turn ON display 4 and print 1st digit
-    __delay_ms(5); ssu=0;     //Turn OFF display 4 after 5ms delay
+    // Liga e desliga o display de unidade dos Segundos
+    PORTD=segmento[segdU]; SET_PIN_HIGH(PORTC, ssu); __delay_ms(5); SET_PIN_LOW(PORTC, ssu);
 }
 
 void main()

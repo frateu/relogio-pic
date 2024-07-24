@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.46\pic\dat\20240104201356_en.msgs \
   -cn -h+dist/default/production\relogio-pic.production.sym \
   --cmf=dist/default/production\relogio-pic.production.cmf -z -Q16F877A \
-  -oC:\Users\mathe\AppData\Local\Temp\xcAsoi8.\driver_tmp_3.o \
+  -oC:\Users\mathe\AppData\Local\Temp\xcAs3f0.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/relogio-pic.production.map \
-  --md=C:\Users\mathe\AppData\Local\Temp\xcAsoi8.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\mathe\AppData\Local\Temp\xcAs3f0.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -22,7 +22,7 @@ Linker command line:
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,sivt,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -k \
-  C:\Users\mathe\AppData\Local\Temp\xcAsoi8.\driver_tmp_10.o \
+  C:\Users\mathe\AppData\Local\Temp\xcAs3f0.\driver_tmp_12.o \
   dist/default/production\relogio-pic.production.o 
 
 Object code version is 3.11
@@ -32,33 +32,33 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\mathe\AppData\Local\Temp\xcAsoi8.\driver_tmp_10.o
+C:\Users\mathe\AppData\Local\Temp\xcAs3f0.\driver_tmp_12.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1        0       4
 dist/default/production\relogio-pic.production.o
                 cinit                               7E8      7E8       18      FD0       0
                 config                             2007     2007        1        0       4
-                text3                               5FF      5FF       44      BFE       0
-                text2                               5C5      5C5       3A      B8A       0
-                text1                               699      699      14F      D32       0
-                maintext                            643      643       56      C86       0
+                text3                               5E7      5E7       44      BCE       0
+                text2                               5AD      5AD       3A      B5A       0
+                text1                               681      681      167      D02       0
+                maintext                            62B      62B       56      C56       0
                 cstackBANK0                          20       20       26       20       1
                 cstackCOMMON                         70       70        D       70       1
-                inittext                            59E      59E       13      B3C       0
+                inittext                            586      586       13      B0C       0
                 dataBANK0                            46       46       14       20       1
                 bssBANK0                             5A       5A        6       20       1
-                idataBANK0                          5B1      5B1       14      B62       0
+                idataBANK0                          599      599       14      B32       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 end_init                              0        0        3         0
                 cinit                               7E8      7E8       18         0
-                text3                               5FF      5FF       44         0
-                text2                               5C5      5C5       3A         0
-                text1                               699      699      14F         0
-                maintext                            643      643       56         0
-                inittext                            59E      59E       13         0
-                idataBANK0                          5B1      5B1       14         0
+                text3                               5E7      5E7       44         0
+                text2                               5AD      5AD       3A         0
+                text1                               681      681      167         0
+                maintext                            62B      62B       56         0
+                inittext                            586      586       13         0
+                idataBANK0                          599      599       14         0
 
         CLASS   STRCODE        
 
@@ -113,12 +113,12 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
                 cstackBANK0                    000020  000040  000060        20       1  BANK0       1
                 cstackCOMMON                   000070  00000D  00007D        70       1  COMMON      1
-                inittext                       00059E  000013  0005B1       B3C       0  CODE        2
-                idataBANK0                     0005B1  000014  0005C5       B62       0  CODE        2
-                text2                          0005C5  00003A  0005FF       B8A       0  CODE        2
-                text3                          0005FF  000044  000643       BFE       0  CODE        2
-                maintext                       000643  000056  000699       C86       0  CODE        2
-                text1                          000699  00014F  0007E8       D32       0  CODE        2
+                inittext                       000586  000013  000599       B0C       0  CODE        2
+                idataBANK0                     000599  000014  0005AD       B32       0  CODE        2
+                text2                          0005AD  00003A  0005E7       B5A       0  CODE        2
+                text3                          0005E7  000044  00062B       BCE       0  CODE        2
+                maintext                       00062B  000056  000681       C56       0  CODE        2
+                text1                          000681  000167  0007E8       D02       0  CODE        2
                 cinit                          0007E8  000018  000800       FD0       0  CODE        2
 
 
@@ -129,13 +129,13 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             0003-059D            59B           2
+        CODE             0003-0585            583           2
                          0800-1FFF            800
         COMMON           007D-007D              1           1
-        CONST            0003-059D            100           2
+        CONST            0003-0585            100           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            0003-059D            100           2
+        ENTRY            0003-0585            100           2
                          0800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0060-006F             10           1
@@ -146,9 +146,9 @@ UNUSED ADDRESS RANGES
         SFR1             0080-009F             20           1
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
-        STRCODE          0003-059D            59B           2
+        STRCODE          0003-0585            583           2
                          0800-1FFF           1800
-        STRING           0003-059D            100           2
+        STRING           0003-0585            100           2
                          0800-1FFF            100
 
                                   Symbol Table
@@ -157,13 +157,6 @@ UNUSED ADDRESS RANGES
 ?___lwmod                cstackCOMMON 0070
 _PORTC                   (abs)        0007
 _PORTD                   (abs)        0008
-_RC0                     (abs)        0038
-_RC1                     (abs)        0039
-_RC2                     (abs)        003A
-_RC3                     (abs)        003B
-_RC4                     (abs)        003C
-_RC5                     (abs)        003D
-_RD7                     (abs)        0047
 _TRISC                   (abs)        0087
 _TRISD                   (abs)        0088
 __H__absolute__          __absolute__ 0000
@@ -255,12 +248,12 @@ ___int_sp                stack        0000
 ___int_stack_hi          stack        0000
 ___int_stack_lo          stack        0000
 ___latbits               (abs)        0002
-___lwdiv                 text3        05FF
+___lwdiv                 text3        05E7
 ___lwdiv@counter         cstackCOMMON 0076
 ___lwdiv@dividend        cstackCOMMON 0072
 ___lwdiv@divisor         cstackCOMMON 0070
 ___lwdiv@quotient        cstackCOMMON 0074
-___lwmod                 text2        05C5
+___lwmod                 text2        05AD
 ___lwmod@counter         cstackCOMMON 0074
 ___lwmod@dividend        cstackCOMMON 0072
 ___lwmod@divisor         cstackCOMMON 0070
@@ -269,30 +262,30 @@ ___stack_hi              stack        0000
 ___stack_lo              stack        0000
 ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
-__end_of___lwdiv         text3        0643
-__end_of___lwmod         text2        05FF
+__end_of___lwdiv         text3        062B
+__end_of___lwmod         text2        05E7
 __end_of__initialization cinit        07FC
-__end_of_main            maintext     0699
+__end_of_main            maintext     0681
 __end_of_relogio_click   text1        07E8
 __initialization         cinit        07E8
 __pbssBANK0              bssBANK0     005A
 __pcstackBANK0           cstackBANK0  0020
 __pcstackCOMMON          cstackCOMMON 0070
 __pdataBANK0             dataBANK0    0046
-__pidataBANK0            idataBANK0   05B1
-__pmaintext              maintext     0643
-__ptext1                 text1        0699
-__ptext2                 text2        05C5
-__ptext3                 text3        05FF
+__pidataBANK0            idataBANK0   0599
+__pmaintext              maintext     062B
+__ptext1                 text1        0681
+__ptext2                 text2        05AD
+__ptext3                 text3        05E7
 _hora                    bssBANK0     005A
-_main                    maintext     0643
+_main                    maintext     062B
 _mint                    bssBANK0     005C
-_relogio_click           text1        0699
+_relogio_click           text1        0681
 _segd                    bssBANK0     005E
 btemp                    (abs)        007E
 end_of_initialization    cinit        07FC
-init_fetch0              inittext     059E
-init_ram0                inittext     05A2
+init_fetch0              inittext     0586
+init_ram0                inittext     058A
 intlevel0                functab      0000
 intlevel1                functab      0000
 intlevel2                functab      0000
@@ -321,7 +314,7 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
-		___lwdiv       		CODE           	05FF	0000	68
+		___lwdiv       		CODE           	05E7	0000	68
 
 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c estimated size: 68
 
@@ -331,13 +324,13 @@ shared
 shared estimated size: 20
 
 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
-		___lwmod       		CODE           	05C5	0000	58
+		___lwmod       		CODE           	05AD	0000	58
 
 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c estimated size: 58
 
 main.c
-		_main          		CODE           	0643	0000	86
-		_relogio_click 		CODE           	0699	0000	335
+		_main          		CODE           	062B	0000	86
+		_relogio_click 		CODE           	0681	0000	359
 
-main.c estimated size: 421
+main.c estimated size: 445
 

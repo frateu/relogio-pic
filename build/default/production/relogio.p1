@@ -1,15 +1,34 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"6 ./relogio.h
+[p x FOSC  =  XT         ]
+"7
+[p x WDTE  =  OFF        ]
+"8
+[p x PWRTE  =  ON        ]
+"9
+[p x BOREN  =  ON        ]
+"10
+[p x LVP  =  OFF         ]
+"11
+[p x CPD  =  OFF         ]
+"12
+[p x WRT  =  OFF         ]
+"13
+[p x CP  =  OFF          ]
 "11 relogio.c
+[; ;relogio.c: 11: unsigned int hora = 0;
 [v _hora `ui ~T0 @X0 1 e ]
 [i _hora
 -> -> 0 `i `ui
 ]
 "12
+[; ;relogio.c: 12: unsigned int mint = 0;
 [v _mint `ui ~T0 @X0 1 e ]
 [i _mint
 -> -> 0 `i `ui
 ]
 "13
+[; ;relogio.c: 13: unsigned int segd = 0;
 [v _segd `ui ~T0 @X0 1 e ]
 [i _segd
 -> -> 0 `i `ui
